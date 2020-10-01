@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 javascript</title>
+</head>
+<body>
+    <script>
+       //Ejercicio 5 - Desarrollar un programa que permita cargar 5 números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.
+
+       const numeros = [];
+       var pares = 0;
+       var impares = 0;
+
+       for (let i = 0; i < 5; i++) {
+           numeros[numeros.length] = parseInt (prompt (`Ingresá el número ${i+1}`))
+           if (numeros[i] != 0 && numeros[i] % 2 == 0) {pares++;}
+           else if (numeros[i] != 0 && numeros[i] % 2 != 0) {impares++;}
+       };
+
+       document.write (`Los números ingresados son ${numeros} <br>`);
+       document.write (`${pares} es la cantidad de números pares ingresados <br>`);
+       document.write (`${impares} es la cantidad de números impares ingresados <br>`);
+
+</script>
+</body>
+</html>

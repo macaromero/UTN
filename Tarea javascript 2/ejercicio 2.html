@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 javascript</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 2 - Desarrollar un programa que solicite la carga de 10 números e imprima la suma de lo últimos 5 valores ingresados.
+              
+       const numeros = [];
+       var suma = 0;
+       for (let i=0; i<10; i++) {
+           numeros[numeros.length] = parseInt (prompt (`Ingresá el número ${i+1}`));
+           if (i>4) {suma = suma + numeros[i]};
+           };
+
+       document.write (`Los números ingresados son ${numeros}. <br>`);    
+       document.write (`La suma de los últimos cinco números ingresados es ${suma}.`);
+       
+    </script>
+    
+</body>
+</html>

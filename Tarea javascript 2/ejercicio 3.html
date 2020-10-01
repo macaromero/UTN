@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 javascript</title>
+</head>
+<body>
+    <script>
+        /*Ejercicio 3 - 3. Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+
+            a. La cantidad de valores negativos ingresados.
+            b. La cantidad de valores positivos ingresados.
+            c. La cantidad de múltiplos de 15.
+            d. El valor acumulado de los números ingresados que son pares. */
+
+
+
+       const valores = [];
+       var positivos = 0;
+       var negativos = 0;
+       var multiplos = 0;
+       var pares = 0;
+
+       for (let i = 0; i < 10; i++) {
+           valores[valores.length] = parseInt (prompt (`Ingresá el número ${i+1}`));
+           if (valores[i]>0) {positivos++;} 
+           else if (valores[i]<0) {negativos++;}
+           if (valores[i] > 0 && valores[i] % 15 == 0) {multiplos++;}
+           if (valores[i] != 0 && valores[i] % 2 == 0) {pares = pares + valores[i];}
+       };  
+
+        document.write (`Los números ingresados son:<br>${valores}<br>`)
+        document.write (`${positivos} son positivos<br>`)
+        document.write (`${negativos} son negativos<br>`)
+        document.write (`${multiplos} son múltiplos de 15<br>`)
+        document.write (`La suma de los valores pares da ${pares}`)
+    </script>
+    
+</body>
+</html>
